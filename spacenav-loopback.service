@@ -1,0 +1,13 @@
+[Unit]
+Description=Add loopback alias for spacenav-ws (Onshape SpaceMouse)
+Before=network-pre.target
+Wants=network-pre.target
+
+[Service]
+Type=oneshot
+RemainAfterExit=yes
+ExecStart=/usr/bin/ip addr add 127.51.68.120/8 dev lo
+ExecStop=/usr/bin/ip addr del 127.51.68.120/8 dev lo
+
+[Install]
+WantedBy=multi-user.target

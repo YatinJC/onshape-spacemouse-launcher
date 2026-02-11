@@ -1,0 +1,10 @@
+#!/bin/bash
+# Launch spacenav-ws server and open Onshape in Firefox
+
+# Start server only if not already running
+if ! pgrep -f 'spacenav-ws.*serve' >/dev/null; then
+    uvx spacenav-ws@latest serve &
+    sleep 2
+fi
+
+firefox --new-window "https://cad.onshape.com"

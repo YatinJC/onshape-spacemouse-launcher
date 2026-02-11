@@ -1,0 +1,8 @@
+[Desktop Entry]
+Name=Onshape
+Comment=Onshape CAD with SpaceMouse support
+Exec=$HOME/.local/bin/onshape-launch
+Icon=$HOME/.local/share/icons/onshape.png
+Terminal=false
+Type=Application
+Categories=Graphics;Engineering;
