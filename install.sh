@@ -29,7 +29,7 @@ sudo systemctl enable --now spacenav-loopback.service
 
 echo ""
 echo "Installed! Before first use:"
-echo "  1. Install Tampermonkey or Violentmonkey in Firefox"
+echo "  1. Install Tampermonkey or Violentmonkey in your browser"
 echo "  2. Install the userscript: https://greasyfork.org/en/scripts/533516"
 echo "  3. Run 'onshape-launch' or find Onshape in your app launcher"
 echo "  4. On first run, open https://127.51.68.120:8181 and accept the certificate"

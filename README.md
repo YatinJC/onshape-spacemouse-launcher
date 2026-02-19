@@ -6,7 +6,7 @@ One-click desktop launcher for [Onshape](https://cad.onshape.com) with [SpaceMou
 
 - [spacenavd](https://github.com/FreeSpacenav/spacenavd) and libspnav installed and running
 - [uv](https://github.com/astral-sh/uv) (provides `uvx`)
-- Firefox with [Tampermonkey](https://addons.mozilla.org/en-US/firefox/addon/tampermonkey/) or [Violentmonkey](https://addons.mozilla.org/en-US/firefox/addon/violentmonkey/)
+- A browser with [Tampermonkey](https://www.tampermonkey.net/) or [Violentmonkey](https://violentmonkey.github.io/) support
 - The [Onshape 3D-Mouse on Linux](https://greasyfork.org/en/scripts/533516-onshape-3d-mouse-on-linux-in-page-patch) userscript
 
 ### Arch / CachyOS
@@ -32,7 +32,7 @@ The install script will:
 
 ## First Run
 
-1. Open https://127.51.68.120:8181 in Firefox and accept the self-signed certificate
+1. Open https://127.51.68.120:8181 in your browser and accept the self-signed certificate
 2. Launch Onshape from your app menu (or run `onshape-launch`)
 3. Open a document and move your SpaceMouse
 
@@ -41,7 +41,7 @@ The install script will:
 Onshape expects the 3Dconnexion driver at `127.51.68.120:8181`. On Windows/macOS, the proprietary driver handles this. On Linux, this launcher:
 
 1. **spacenav-loopback.service** adds `127.51.68.120` as a loopback alias at boot
-2. **onshape-launch** starts the [spacenav-ws](https://github.com/RmStorm/spacenav-ws) WebSocket bridge (which reads from spacenavd and serves the 3Dconnexion protocol) then opens Onshape in Firefox
+2. **onshape-launch** starts the [spacenav-ws](https://github.com/RmStorm/spacenav-ws) WebSocket bridge (which reads from spacenavd and serves the 3Dconnexion protocol) then opens Onshape in the default browser
 3. The **userscript** patches Onshape's platform detection so it attempts to connect to the driver
 
 ## Uninstall
