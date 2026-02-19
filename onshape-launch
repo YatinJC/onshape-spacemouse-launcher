@@ -1,5 +1,5 @@
 #!/bin/bash
-# Launch spacenav-ws server and open Onshape in Firefox
+# Launch spacenav-ws server and open Onshape in the default browser
 
 # Start server only if not already running
 if ! pgrep -f 'spacenav-ws.*serve' >/dev/null; then
@@ -7,4 +7,4 @@ if ! pgrep -f 'spacenav-ws.*serve' >/dev/null; then
     sleep 2
 fi
 
-firefox --new-window "https://cad.onshape.com"
+xdg-open "https://cad.onshape.com"

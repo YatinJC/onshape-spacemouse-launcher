@@ -4,7 +4,7 @@ set -e
 SCRIPT_DIR="$(cd "$(dirname "$0")" && pwd)"
 
 # Check dependencies
-for cmd in uvx spacenavd firefox; do
+for cmd in uvx spacenavd; do
     if ! command -v "$cmd" >/dev/null 2>&1; then
         echo "Error: $cmd is not installed."
         exit 1
